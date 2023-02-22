@@ -14,6 +14,7 @@ html, body {
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
 }
 
 h1 {
@@ -21,9 +22,38 @@ h1 {
 }
 
 #mantenimiento {
-    height: 90%;
+    height: 65%;
     background-image: url(assets/logoConstruccion.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+}
+
+#contacto {
+    text-align: center;
+}
+
+#contacto h2 {
+    margin-bottom: 10px;
+}
+
+#iconos {
+    margin: 0 10%;
+}
+
+.icono {
+    display: flex;
+    height: 33%;
+    align-items: center;
+    justify-content: left;
+    margin: 10px 0;;
+}
+
+
+.icono img {
+    object-fit: contain;
+}
+
+.icono a {
+    margin: 0 25px;
 }
