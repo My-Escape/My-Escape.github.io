@@ -1,59 +1,526 @@
 * {
-    margin: 0px;
-    padding: 0px;
+  margin: 0;
+  padding: 0;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
-html, body {
-    width: 100%;
+html,
+body {
+  width: 100%;
+  height: 100%;
+  scroll-behavior: smooth;
+}
+
+header {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+header img {
+  max-height: 40vh;
+  max-width: 100vw;
+}
+
+nav {
+  display: flex;
+  background-color: #1b1d21;
+  padding: 2.7vw 0;
+}
+
+nav div {
+  width: 33.33vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+nav a {
+  text-decoration: none;
+  color: white;
+  font-size: 5vw;
+}
+
+
+/*
+------------------KEYWORDS------------------
+
+#keywords {
+  background-color: #fef3c7;
+}
+
+#keywords h2 {
+  font-size: 6vw;
+  font-weight: normal;
+  letter-spacing: 1.3vw;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#keywords .cuadrado {
+  padding: 7vw 0;
+  height: 100%;
+  text-align: center;
+  width: 95vw;
+  margin: 0 auto;
+}
+
+#keywords .cuadrado span{
+  text-decoration: underline;
+}
+*/
+
+
+/*------------------INFO EXTRA------------------*/
+
+#extraInfo {
+  margin: 20vw auto 22vw auto;
+  width: 85vw;
+  text-align: left;
+  border: 2.5vw solid transparent;
+
+  background-image:
+    linear-gradient(white, white),
+    linear-gradient(180deg, #a8e1d5, #ffe7b2 50%, #a8e1d5);
+
+  background-repeat: no-repeat;
+  background-size: 100% 100%, 100% 200%;
+  background-position: 0 0, 0 100%;
+  background-origin: padding-box, border-box;
+  animation: KF 1s infinite alternate;
+}
+
+@keyframes KF {
+  100% {
+    background-position: 0 0, 0 0;
+  }
+}
+
+#extraInfo h2 {
+  font-family: 'Rampart One';
+  font-size: 8vw;
+  letter-spacing: 1vw;
+  line-height: 9vw;
+  background: url(assets/list-style.png) no-repeat left top 2.5vw;
+  background-size: 5vw;
+  padding-left: 7vw;
+}
+
+#extraInfo ul {
+  list-style: none;
+}
+
+#extraInfo li {
+  margin: 7vw 2vw;
+}
+
+
+
+/*------------------OFERTA------------------*/
+
+.box {
+  margin: 0 auto;
+  padding: 7vw 0;
+  position: relative;
+  width: 90vw;
+  background: #fff;
+  box-shadow: 0 0 2vw;
+}
+
+.ribbon {
+  position: absolute;
+  right: -1.282vw;
+  top: -1.282vw;
+  z-index: 1;
+  overflow: hidden;
+  width: 19.231vw;
+  height: 19.231vw;
+  text-align: right;
+}
+
+.ribbon span {
+  font-size: 2.564vw;
+  font-weight: bold;
+  color: #FFF;
+  text-transform: uppercase;
+  text-align: center;
+  line-height: 5.128vw;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  width: 25.641vw;
+  display: block;
+  background: #79A70A;
+  background: linear-gradient(#3498DB 0%, #2980B9 100%);
+  box-shadow: 0 0.769vw 2.564vw -1.282vw rgba(0, 0, 0, 1);
+  position: absolute;
+  top: 4.872vw;
+  right: -5.385vw;
+}
+
+.ribbon span::before {
+  content: "";
+  position: absolute;
+  left: 0vw;
+  top: 100%;
+  z-index: -1;
+  border-left: 0.769vw solid #2980B9;
+  border-right: 0.769vw solid transparent;
+  border-bottom: 0.769vw solid transparent;
+  border-top: 0.769vw solid #2980B9;
+}
+
+.ribbon span::after {
+  content: "";
+  position: absolute;
+  right: 0vw;
+  top: 100%;
+  z-index: -1;
+  border-left: 0.769vw solid transparent;
+  border-right: 0.769vw solid #2980B9;
+  border-bottom: 0.769vw solid transparent;
+  border-top: 0.769vw solid #2980B9;
+}
+
+.textoOferta {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  gap: 3vw;
+}
+
+.textoOferta p {
+  font-family: 'Galindo';
+  color: black;
+  font-size: 5vw;
+}
+
+.textoOferta .p2 {
+  font-size: 5vw;
+}
+
+.asteriscoPrecios {
+  margin: 5vw 5vw;
+}
+
+.asteriscoPrecios p {
+  font-family: 'Galindo';
+  font-size: 3vw;
+}
+
+.box2 {
+  margin-top: 7vw;
+  padding: 3vw 0;
+}
+
+
+/*------------------CONTACTA------------------*/
+
+#reservaBlock {
+  margin: 20vw 5vw 0vw 5vw;
+  background-color: #ffd52b;
+  border: 2.5vw solid #1b1d21;
+  padding: 3vw 0 0 0;
+}
+
+
+.reservaTitulo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.reservaT1 {
+  -webkit-text-stroke: 0.5vw rgb(0, 0, 0);
+  font-size: 10vw;
+  font-weight: bold;
+  color: red;
+}
+
+.reservaRaya {
+  height: 0.5vw;
+  width: 83vw;
+  background-color: black;
+  margin: 1vw 0;
+}
+
+.reservaT2 {
+  font-size: 3.5vw;
+  font-weight: bold;
+}
+
+#reservaBoton {
+  margin: 7vw 15vw;
+  padding: 3vw 0;
+  border-radius: 10vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  background-color: #34B7F1;
+  /*#64acdc*/
+  text-decoration: none;
+  color: black;
+}
+
+#reservaBoton img {
+  width: 7vw;
+}
+
+#reservaBoton p {
+  font-size: 4vw;
+}
+
+#empresas {
+  --mask: conic-gradient(from -45deg at bottom, #0000, #000 1deg 89deg, #0000 90deg) 50%/8.00vw 100%;
+  -webkit-mask: var(--mask);
+  mask: var(--mask);
+  background-color: #ffd52bbc;
+  margin: 0 auto;
+  margin-bottom: 20vw;
+  width: 90vw;
+}
+
+#empresasDiv {
+  padding: 2vw 0 4vw 0;
+  font-size: 4vw;
+  text-align: center;
+}
+
+.empresasEsp {
+  margin: 5vw 0;
+}
+
+
+/*------------------VIDEO------------------*/
+
+#myVideo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#myVideo video {
+  width: 90vw;
+}
+
+
+/*------------------PREGUNTAS FRECUENTES------------------*/
+
+#faq {
+  margin: 20vw auto 0 auto;
+  text-align: center;
+  font-size: 3.8vw;
+  background-color: #4ec9bf;
+  width: 90vw;
+  border: dashed 0.78vw #2b2b2b;
+  border-bottom: solid 0.78vw #000000;
+  padding: 2vw 0;
+}
+
+#chat {
+  margin: 0 auto 20vw auto;
+
+  border: dashed 0.78vw #2b2b2b;
+  border-top: none;
+
+  background-color: white;
+  border-radius: 0 0 3vw 3vw;
+  width: 90vw;
+  /*box-shadow: 0 0 10px 1px #0bafa1;*/
+}
+
+.mensaje {
+  display: inline-block;
+  font-size: 4vw;
+  border-radius: 5vw;
+}
+
+.m-left {
+  background-color: #008484;
+  margin: 5vw 15vw 5vw 5vw;
+  border-bottom-left-radius: 0;
+  color: white;
+}
+
+.m-right {
+  background-color: #1a8400;
+  /*#00ac0c*/
+  margin: 5vw 5vw 5vw 15vw;
+  border-bottom-right-radius: 0;
+  color: white;
+}
+
+.mensaje p {
+  padding: 3vw 5vw;
+}
+
+
+/*------------------VOLVER A RESERVA------------------*/
+
+#volver {
+  background: repeating-linear-gradient(90deg,
+      #a8e1d5,
+      #a8e1d5 2.5vw,
+      #88cbbd 2.5vw,
+      #88cbbd 5.13vw);
+  display: flex;
+  align-items: center;
+  border: 0.25vw solid #ccc;
+  margin: 0 5vw 20vw 5vw;
+  padding: 3vw 0;
+  gap: 5vw;
+  justify-content: center;
+}
+
+#volver img {
+  width: 10.25vw;
+}
+
+#volver a {
+  color: black;
+  text-decoration: none;
+  font-size: 5vw;
+  font-weight: bold;
+}
+
+
+
+/*------------------FOOT------------------*/
+
+#foot {
+  background-color: #1b1d21;
+  width: 100%;
+  font-size: 4vw;
+}
+
+#foot h2 {
+  color: white;
+  font-size: 5vw;
+  font-weight: bold;
+  text-align: center;
+  padding: 2vw 0;
+}
+
+.footItem {
+  padding: 3vw 5vw;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.footItem a {
+  text-decoration: none;
+  color: white;
+}
+
+.footItem img {
+  width: 10vw;
+}
+
+#CONSTRUCCION {
+  display: none;
+}
+
+
+/*----------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+/*----------------------------VERSION DE ESCRITORIO---------------------------*/
+/*----------------------------------------------------------------------------*/
+/*----------------------------------------------------------------------------*/
+
+@media screen and (orientation: landscape) {
+
+  .slide {
+    display: none;
+  }
+
+  #volver {
+    display: none;
+  }
+
+  #foot {
+    display: none;
+  }
+
+  #CONSTRUCCION {
+    display: block;
     height: 100%;
-}
+  }
 
-#titulo {
+  #titulo {
     background-color: #55e5ef;
-    height: 10%;
+    height: 20%;
     display: flex;
+    flex-direction: column;
     align-items: center;
     justify-content: center;
     text-align: center;
-}
+    font-size: 4.5vw;
+    font-weight: bold;
+  }
 
-h1 {
+  .sub {
+    font-size: 3vw;
+  }
+
+  #CONSTRUCCION p {
     font-size: 4;
-}
+  }
 
-#mantenimiento {
-    height: 65%;
+  #mantenimiento {
+    height: 60%;
     background-image: url(assets/logoConstruccion.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
-}
+  }
 
-#contacto {
+  #contacto {
+    height: 20%;
     text-align: center;
-}
-
-#contacto h2 {
-    margin-bottom: 10px;
-}
-
-#iconos {
-    margin: 0 10%;
-}
-
-.icono {
+    background-color: #1b1d21;
     display: flex;
-    height: 33%;
+    flex-direction: column;
     align-items: center;
-    justify-content: left;
-    margin: 10px 0;;
-}
+    justify-content: space-around;
+  }
+
+  #contacto p {
+    font-size: 2.5vw;
+    color: white;
+  }
+
+  #iconos {
+    margin: 0 10%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    width: 100%;
+  }
+
+  .icono {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0;
+  }
 
 
-.icono img {
+  .icono img {
     object-fit: contain;
-}
+  }
 
-.icono a {
+  .icono a {
     margin: 0 25px;
+    text-decoration: none;
+    color: white;
+    font-size: 2vw;
+  }
+
+
+
+  /*--------------------------------------------------------------*/
+  /*--------------------CIERRE DEL MEDIA QUERY--------------------*/
+  /*--------------------------------------------------------------*/
 }

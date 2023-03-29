@@ -1,21 +1,190 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>MyEscape</title>
-        <link rel="icon" type="image/x-icon" href="assets/logo.png">
-        <link rel="stylesheet" href="style.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    </head>
-    <body>
+
+<head>
+    <title>MyEscape</title>
+    <link rel="icon" type="image/x-icon" href="assets/logo.png" />
+    <link rel="stylesheet" type="text/css" href="style.css" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+        href="https://fonts.googleapis.com/css2?family=Bangers&family=Galindo&family=Rampart+One&family=Ribeye+Marrow&display=swap"
+        rel="stylesheet" />
+
+</head>
+
+<body>
+    <div class="slide slide1">
+        <div class="mitad left">
+            <header>
+                <h1>
+                    <a href="https://my-escape.github.io">
+                        <img src="assets/logo.png" alt="Escape room a domicilio">
+                    </a>
+                </h1>
+
+            </header>
+
+            <nav>
+                <div><a href="#reservaBlock">Reserva</a></div>
+                <div><a href="#faq">Preguntas frecuentes</a></div>
+                <div><a href="#foot">Contacto</a></div>
+            </nav>
+
+            <div id="extraInfo">
+                <ul>
+                    <li>
+                        <h2>A domicilio en toda la provincia de Alicante</h2>
+                    </li>
+                    <li>
+                        <h2>Para niños</h2>
+                    </li>
+                    <li>
+                        <h2>Temática personalizada</h2>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="mitad right">
+            <div id="bloquePrecio">
+                <div id="cubosPrecio">
+                    <div class="box">
+                        <div class="ribbon"><span>PRECIOS</span></div>
+                        <div class="textoOferta">
+                            <p class="p1">MÁS DE 10 NIÑOS = 13€/NIÑO</p>
+                            <p class="p2">MENOS DE 10 NIÑOS = 15€/NIÑO</p>
+                        </div>
+                    </div>
+        
+                    <div class="box box2">
+                        <div class="textoOferta">
+                            <p>Edades entre 6 y 18 años</p>
+                            <p>Desde 6 a 15 jugadores</p>
+                        </div>
+                    </div>
+                </div>
+    
+                <div class="asteriscoPrecios">
+                    <p>* Plus de desplazamiento 10€/20€ consultar distancias</p>
+                </div>
+            </div>
+            
+            <div id="bloqueReserva">
+                <div id="reservaBlock">
+                    <div class="reservaTitulo">
+                        <p class="reservaT1">RESERVA</p>
+                        <div class="reservaRaya"></div>
+                        <p class="reservaT2">HÁBLANOS POR WHATSAPP O LLÁMANOS</p>
+                        <p class="reservaT2">PARA REALIZAR TU RESERVA</p>
+                    </div>
+    
+                    <a id="reservaBoton" href="https://wa.me/34611754664">
+                        <img src="assets/whatsapp.png">
+                        <p>+34 611 75 46 64</p>
+                    </a>
+                </div>
+    
+                <div id="empresas">
+                    <div id="empresasDiv">
+                        <p>Si eres una empresa</p>
+                        <p>contáctanos y pregunta presupuesto</p>
+                        <p class="empresasEsp">Llevamos el juego a tu local</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="slide slide2">
+        <div class="mitad right">
+            <div id="myVideo">
+                <video controls poster="assets/poster.png">
+                    <source src="assets/video.mp4" type="video/mp4">
+                    Tu navegador no puede reproducir el video
+                </video>
+            </div>
+        </div>
+
+        <div class="mitad left">
+            <div id="faq">
+                <h2>PREGUNTAS FRECUENTES</h2>
+            </div>
+            <div id="chat">
+                <div class="mensaje m-left">
+                    <p>¿El juego lo personalizo con la temática que quiera?</p>
+                </div>
+
+                <div class="mensaje m-right">
+                    <p>Si! La que más le guste al cumpleañero/a y la haremos realidad</p>
+                </div>
+
+                <div class="mensaje m-left">
+                    <p>¿Cuántas habitaciones y espacio se necesita utilizar de la casa?</p>
+                </div>
+
+                <div class="mensaje m-right">
+                    <p>Se utilizarán solo 2 estancias (una grande y otra pequeña). No se utilizará ningún mobiliario ni
+                        se tocará nada de la casa, nosotros llevamos todo el material.</p>
+                </div>
+
+                <div class="mensaje m-left">
+                    <p>¿Cuanto tiempo dura la actividad?</p>
+                </div>
+
+                <div class="mensaje m-right">
+                    <p>La duracion es de 1 hora (iremos una hora antes para prepararlo todo)</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div id="volver">
+        <a href="#reservaBlock"><img src="assets/arrowUP.png" alt="Volver a la reserva"></a>
+        <a href="#reservaBlock">VOLVER A LA RESERVA</a>
+    </div>
+
+    <div id="foot">
+        <div id="h2Div">
+            <h2>Ante cualquier duda escríbenos:</h2>
+        </div>
+
+        <div id="desktopFlex">
+            <div class="footItem">
+                <a href="https://wa.me/34611754664"><img src="assets/phone-color.png" alt="Teléfono de contacto"></a>
+                <a href="https://wa.me/34611754664">
+                    <p>+34 611 754 664</p>
+                </a>
+            </div>
+            <div class="footItem">
+                <a href="https://www.instagram.com/myescapeadomicilio/"><img src="assets/instagram.png"
+                        alt="Instagram logo"></a>
+                <a href="https://www.instagram.com/myescapeadomicilio/">
+                    <p>@myescapeadomicilio</p>
+                </a>
+            </div>
+            <div class="footItem">
+                <a href="mailto:myescapeadomicilio@gmail.com"><img src="assets/gmail.png" alt="Gmail logo"></a>
+                <a href="mailto:myescapeadomicilio@gmail.com">
+                    <p>myescapeadomicilio@gmail.com</p>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <div id="CONSTRUCCION">
         <div id="titulo">
-            <h1>PÁGINA EN CONSTRUCCIÓN</h1>
+            <p>PÁGINA EN CONSTRUCCIÓN</p>
+            <p class="sub">PRUEBA LA PÁGINA EN VERTICAL</p>
         </div>
         <div id="mantenimiento"></div>
         <div id="contacto">
-            <h2>CONTACTA CON NOSOTROS</h2>
+            <p>CONTACTA CON NOSOTROS</p>
             <div id="iconos">
                 <div class="icono">
-                    <img src="assets/whatsapp.png" alt="Icono Whtasapp"/>
+                    <img src="assets/whatsappConstruccion.png" alt="Icono Whtasapp"/>
                     <a href="tel:611 754 664">611 754 664</a>
                 </div>
                 <div class="icono">
@@ -27,7 +196,8 @@
                     <a href="https://www.instagram.com/myescapeadomicilio/">@myescapeadomicilio</a>
                 </div>
             </div>
-            
         </div>
-    </body>
+    </div>
+</body>
+
 </html>
