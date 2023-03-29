@@ -194,8 +194,12 @@ nav a {
   font-size: 5vw;
 }
 
+.textoOferta .p1 {
+  font-size: 8vw;
+}
+
 .textoOferta .p2 {
-  font-size: 5vw;
+  font-size: 3vw;
 }
 
 .asteriscoPrecios {
@@ -208,7 +212,7 @@ nav a {
 }
 
 .box2 {
-  margin-top: 7vw;
+  margin-top: 20vw;
   padding: 3vw 0;
 }
 
