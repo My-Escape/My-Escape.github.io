@@ -11,7 +11,7 @@ body {
   scroll-behavior: smooth;
 }
 
-.slide h1, h2, p {
+.slide h1, h2, h3, p {
   user-select: none;
 }
 
@@ -22,22 +22,59 @@ header {
 }
 
 header img {
-  max-height: 40vh;
+  max-height: 30vh;
   max-width: 100vw;
+}
+
+#age {
+  display: flex;
+  justify-content: center;
+  gap: 4vw;
+  margin-bottom: 15vw;
+}
+
+#age a {
+  text-decoration: none;
+  color: black;
+  filter: drop-shadow(0 0 1vw #9c9c9c);
+  border-radius: 5vw;
+  background-color: white;
+}
+
+#age div {
+  width: 40vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  text-align: center;
+  padding: 10vw 0;
+  border-radius: 5vw;
+}
+
+#children {
+  border: 1.5vw solid #ff8f4e;
+  background-color: #ffceb22a;
+  color: #ff8f4e;
+}
+
+#grownups {
+  border: 1.5vw solid #5463d5;
+  background-color: #a8afe128;
+  color: #5463d5;
+}
+
+#age div p {
+  line-height: 7vw;
+  font-size: 4.5vw;
+  font-weight: bold;
 }
 
 nav {
   display: flex;
-  flex-wrap: wrap;
   justify-content: center;
   text-align: center;
   background-color: #1b1d21;
-}
-
-#separador {
-  width: 90vw;
-  height: 0.5px;
-  background-color: rgb(201, 201, 201);
+  margin: 5vw 0 15vw 0;
 }
 
 nav div {
@@ -45,24 +82,24 @@ nav div {
   display: flex;
   align-items: center;
   justify-content: center;
+  height: 10vw;
   margin: 2vw 0;
 }
 
-.middle {
+nav div:not(:first-child) {
   border-left: 1px solid rgb(201, 201, 201);
-  border-right: 1px solid rgb(201, 201, 201);
 }
 
 nav a {
   text-decoration: none;
   color: white;
-  font-size: 5vw;
+  font-size: 3.5vw;
 }
 
 /*------------------INFO EXTRA------------------*/
 
 #extraInfo {
-  margin: 20vw auto 22vw auto;
+  margin: 0 auto;
   width: 85vw;
   text-align: left;
   border: 2.5vw solid transparent;
@@ -85,13 +122,11 @@ nav a {
 }
 
 #extraInfo h2 {
-  font-family: 'Rampart One';
   font-size: 8vw;
+  font-weight: bold;
   letter-spacing: 1vw;
   line-height: 9vw;
-  background: url(assets/list-style.png) no-repeat left top 2.5vw;
-  background-size: 5vw;
-  padding-left: 7vw;
+  text-align: center;
 }
 
 #extraInfo ul {
@@ -102,30 +137,78 @@ nav a {
   margin: 7vw 2vw;
 }
 
-/*------------------TEMATICA------------------*/
 
-#tematica {
-  border: 5px solid #9fd8f1;
-  border-style:outset;
-  width: 90vw;
-  margin : 0 auto 22vw auto;
+/*------------------AGE BLOCKS------------------*/
+
+#childrenBlock {
+  width: 85%;
+  margin: 15vw auto;
+  border: 2.5vw solid #ff8f4e;
+  background-color: #ffceb22a;
+  text-align: center;
 }
 
-#tematica h2 {
-  font-size: 8vw;
+#childrenBlock h2 {
+  font-size: 5.5vw;
+  margin: 2vw 0;
+  color: #ff8f4e;
+}
+
+#grownupsBlock {
+  width: 85%;
+  margin: 5vw auto;
+  border: 2.5vw solid #5463d5;
+  background-color: #a8afe128;
   text-align: center;
-  margin: 5vw 0;
-  
+}
+
+#grownupsBlock h2 {
+  font-size: 5.5vw;
+  margin: 2vw 0;
+  color: #5463d5;
+}
+
+#tematica {
+  width: 90%;
+  margin : 10vw auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 #tematica div {
-  border: 1px solid #9c9c9c;
-  width: 60vw;
-  margin: 5vw 0 5vw 10vw;
+  border: 2px solid #9c9c9c;
+  width: 50vw;
+  margin: 2vw 0;
   padding: 4vw;
-  border-radius: 10px;
+  border-radius: 8px;
+  filter: drop-shadow(0 0 1vw #9c9c9c);
   display: flex;
   align-items: center;
+
+  clip-path: polygon(20px 0px, 100% 0px, 100% 100%, 0% 100%, 0% 20px);
+  transition: clip-path 500ms;
+}
+
+#tematica div:after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 20px;
+  height: 20px;
+  background: #9c9c9c;
+  box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.1); 
+  border-radius: 0 0 8px 0;
+  transition: transform 500ms;
+}
+
+#tematica div:hover {
+  clip-path: polygon(0px 0px, 100% 0px, 100% 100%, 0% 100%, 0% 0px);
+}
+
+#tematica div:hover:after {
+  transform: translate(-100%, -100%);
 }
 
 #robo {
@@ -184,9 +267,41 @@ rgba(250,250,250, 0.6)), url('assets/elRoboMal.png');
   display: none;
 }
 
+.cuadrados {
+  border: 1px solid black;
+  width: 80vw;
+  margin: 6vw auto;
+  font-size: 4vw;
+}
+
+#childrenBlock .c1 {
+  border: none;
+  display: flex;
+  justify-content: space-around;
+  font-weight: bold;
+}
+
+#childrenBlock .c1 div {
+  text-align: left;
+}
+
+#grownupsBlock .cuadrados {
+  border: none;
+  font-weight: bold;
+  font-size: 3.5vw;
+}
+
+#grownupsBlock div p {
+  font-size: 4vw;
+}
+
 
 
 /*------------------OFERTA------------------*/
+
+#bloquePrecio {
+  margin-top: 20vw;
+}
 
 .box {
   margin: 0 auto;
@@ -270,7 +385,7 @@ rgba(250,250,250, 0.6)), url('assets/elRoboMal.png');
 }
 
 .textoOferta .p2 {
-  font-size: 3vw;
+  font-size: 4vw;
 }
 
 .asteriscoPrecios {
@@ -280,6 +395,7 @@ rgba(250,250,250, 0.6)), url('assets/elRoboMal.png');
 .asteriscoPrecios p {
   font-family: 'Galindo';
   font-size: 3vw;
+  letter-spacing: 0.5vw;
 }
 
 .box2 {
@@ -362,12 +478,8 @@ rgba(250,250,250, 0.6)), url('assets/elRoboMal.png');
   text-align: center;
 }
 
-.empresasEsp {
-  margin: 5vw 0;
-}
 
-
-/*------------------GALERÍA------------------*/
+/*------------------VIDEO------------------*/
 
 #gallery {
   display: grid;
@@ -380,6 +492,7 @@ rgba(250,250,250, 0.6)), url('assets/elRoboMal.png');
   max-width: 90vw;
   margin: 0 auto;
   transition: all 150ms linear;
+  margin-bottom: 20vw;
 }
 
 #gallery input[type="radio"] {
@@ -440,6 +553,99 @@ rgba(250,250,250, 0.6)), url('assets/elRoboMal.png');
 }
 
 
+/*------------------RESENYAS------------------*/
+
+#resenyas {
+  width: 90vw;
+  margin: 0 auto 20vw auto;
+  background-color: #ffe7b2b3;
+  border: 2px solid black;
+  border-top: none;
+  padding: 5vw 0;
+  border-radius: 0 0 3vw 3vw;
+}
+
+#resenyasFlex {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+}
+
+#resenyasH3 {
+  margin: 0 auto;
+  width: 90vw;
+  text-align: center;
+  font-size: 5vw;
+  background-color: #a8e1d5;
+  border: 2px solid black;
+  padding: 2vw 0;
+}
+
+#resenyas aside {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 2.5vw;
+  width: 45%;
+}
+
+.resenya {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+  overflow-wrap: break-word;
+  border: 1px solid #dbdbdb;
+  border-collapse: collapse;
+}
+
+.rOpinion {
+  font-size: 3vw;
+  margin: 3vw 2vw
+}
+
+.rProfile {
+  display: flex;
+  flex-direction: row;
+  margin: 3vw 2vw;
+  align-items: center;
+  gap: 5%;
+}
+
+.rProfile img {
+  width: 30%;
+}
+
+.rProfile .rAutor {
+  font-size: 3vw;
+  width: 70%;
+}
+
+#resenyas a {
+  display: block;
+  width: 40vw;
+  margin: 5vw auto 0 auto;
+  text-decoration: none;
+  color: black;
+  padding: 2vw;
+  border-radius: 3vw;
+  box-shadow: 0 0 1vw 1vw rgba(0,0,0,0.5);
+}
+
+#resenyas a div {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+#resenyas a img {
+  width: 5vw;
+}
+
+#resenyas a p {
+  font-size: 4vw;
+}
+
+
 /*------------------PREGUNTAS FRECUENTES------------------*/
 
 #faq {
@@ -451,6 +657,10 @@ rgba(250,250,250, 0.6)), url('assets/elRoboMal.png');
   border: dashed 0.78vw #2b2b2b;
   border-bottom: solid 0.78vw #000000;
   padding: 2vw 0;
+}
+
+#faq h3 {
+  font-size: 5vw;
 }
 
 #chat {
@@ -529,7 +739,7 @@ rgba(250,250,250, 0.6)), url('assets/elRoboMal.png');
   font-size: 4vw;
 }
 
-#foot h2 {
+#foot h3 {
   color: white;
   font-size: 5vw;
   font-weight: bold;
@@ -585,7 +795,8 @@ rgba(250,250,250, 0.6)), url('assets/elRoboMal.png');
 
   #titulo {
     background-color: #55e5ef;
-    height: 20%;
+    width: 100vw;
+    height: 20vh;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -595,24 +806,22 @@ rgba(250,250,250, 0.6)), url('assets/elRoboMal.png');
     font-weight: bold;
   }
 
-  .sub {
-    font-size: 3vw;
-  }
-
   #CONSTRUCCION p {
     font-size: 4;
   }
 
   #mantenimiento {
-    height: 60%;
-    background-image: url(assets/logoConstruccion.png);
+    height: 60vh;
+    background-image: url(assets/logo.png);
     background-repeat: no-repeat;
     background-position: center;
     background-size: contain;
+    max-height: 60vh;
+  max-width: 100vw;
   }
 
   #contacto {
-    height: 20%;
+    height: 20vh;
     text-align: center;
     background-color: #1b1d21;
     display: flex;
@@ -621,37 +830,40 @@ rgba(250,250,250, 0.6)), url('assets/elRoboMal.png');
     justify-content: space-around;
   }
 
-  #contacto p {
-    font-size: 2.5vw;
-    color: white;
-  }
-
   #iconos {
-    margin: 0 10%;
     display: flex;
     align-items: center;
     justify-content: space-around;
-    width: 100%;
+    width: 95vw;
+    margin: 0 auto;
+  }
+
+  #iconos a {
+    color: white;
+    border: 2px solid #343638;
+    text-decoration: none;
+    background-color: #28282c;
+    border-radius: 1vw;
   }
 
   .icono {
     display: flex;
     align-items: center;
     justify-content: center;
-    margin: 0;
+    padding: 1vw;
+    gap: 1vw;
   }
-
 
   .icono img {
     object-fit: contain;
+    width: 4.5vw;
   }
 
-  .icono a {
-    margin: 0 25px;
-    text-decoration: none;
-    color: white;
-    font-size: 2vw;
+  .icono p {
+    font-size: 1.9vw;
   }
+
+  
 
 
 
