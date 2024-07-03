@@ -228,11 +228,27 @@ nav a {
   background-position: center;
   background-size: cover;
   color: white;
-  height: 20vw;
+  height: 30vw;
 }
 
 #robo:hover {
-  background: linear-gradient(rgba(250, 250, 250, 0.6), rgba(250, 250, 250, 0.6)), url("assets/elRoboMal.png");
+  background: linear-gradient(rgba(250, 250, 250, 0.8), rgba(250, 250, 250, 0.8)), url("assets/elRoboMal.png");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+#emociones {
+  background-image: url(assets/emociones.png);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  color: white;
+  height: 30vw;
+}
+
+#emociones:hover {
+  background: linear-gradient(rgba(250, 250, 250, 0.75), rgba(250, 250, 250, 0.75)), url("assets/emociones.png");
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
@@ -243,7 +259,7 @@ nav a {
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;
-  height: 15vw;
+  height: 20vw;
 }
 
 #personalizada:hover {
@@ -310,6 +326,24 @@ nav a {
 
 #casoCifraOculta {
   max-width: 100%;
+}
+
+#cifra_oculta {
+  background-color: #000000;
+  background-image: url(assets/caso_cifra_oculta.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  color: white;
+  height: 55vw;
+}
+
+#cifra_oculta:hover {
+  background: linear-gradient(rgba(250, 250, 250, 0.8), rgba(250, 250, 250, 0.8)), url("assets/caso_cifra_oculta.jpg");
+  background-color: #000;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
 }
 
 /*------------------OFERTA------------------*/
@@ -387,6 +421,7 @@ nav a {
   justify-content: space-around;
   align-items: center;
   gap: 3vw;
+  margin-bottom: 4vw;
 }
 
 .textoOferta p {
@@ -425,6 +460,9 @@ nav a {
 
 .asteriscoPrecios {
   margin: 5vw 5vw;
+  display: flex;
+  flex-direction: column;
+  gap: 3vw;
 }
 
 .asteriscoPrecios p {
