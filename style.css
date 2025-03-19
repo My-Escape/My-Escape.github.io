@@ -181,7 +181,7 @@ nav a {
 
 #tematica {
   width: 90%;
-  margin: 5vw auto 10vw auto;
+  margin: 5vw auto 5vw auto;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -269,7 +269,7 @@ nav a {
   background-size: cover;
 }
 
-#tematica .nameTematica {
+#personalizada .nameTematica {
   font-size: 6vw;
   font-weight: bold;
   -webkit-text-stroke: 1px #404040;
@@ -278,6 +278,32 @@ nav a {
   background-clip: text;
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+}
+
+#taller1 .nameTematica {
+  font-size: 6vw;
+  font-weight: bold;
+  -webkit-text-stroke: 1px #404040;
+
+  background: linear-gradient(to right, #960dcc, #ff32cf);
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+#taller1 {
+  background-image: url(assets/taller-2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  height: 20vw;
+}
+
+#taller1:hover {
+  background: linear-gradient(rgba(250, 250, 250, 0.6), rgba(250, 250, 250, 0.6)), url("assets/taller-2.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
 }
 
 #tematica .desc {
@@ -299,7 +325,7 @@ nav a {
 .cuadrados {
   border: 1px solid black;
   width: 80vw;
-  margin: 6vw auto;
+  margin: 5vw auto;
   font-size: 4vw;
 }
 
@@ -344,6 +370,16 @@ nav a {
   background-repeat: no-repeat;
   background-position: center;
   background-size: contain;
+}
+
+/* --------- EXTRAS ----------- */
+
+.extrasBlock {
+  width: 85%;
+  margin: 5vw auto;
+  border: 2.5vw solid #063754;
+  background-color: #a8afe180;
+  text-align: center;
 }
 
 /*------------------OFERTA------------------*/
@@ -434,14 +470,26 @@ nav a {
   font-size: 8vw;
 }
 
-/**********Salvada**********/
-#precioNinyo {
-  font-size: 8vw;
+.candado {
+  width: 1.75rem;
+  margin-right: 0.5rem;
 }
 
-#precioAdulto {
-  font-size: 8vw;
-  margin-top: 5vw;
+/**********Salvada**********/
+.precioNinyo {
+  font-size: 2rem;
+}
+
+.titulo-precios {
+  text-decoration: underline;
+}
+
+.precioAdulto {
+  font-size: 2rem;
+}
+
+.coche-icono {
+  max-width: 2rem;
 }
 
 #precioAdulto + p {
@@ -466,9 +514,12 @@ nav a {
 }
 
 .asteriscoPrecios p {
-  font-family: "Galindo";
-  font-size: 3vw;
-  letter-spacing: 0.5vw;
+  font-size: 4vw !important;
+  font-family: Verdana, Geneva, Tahoma, sans-serif !important;
+}
+
+.margen-abajo {
+  margin-bottom: 1rem;
 }
 
 .box2 {
